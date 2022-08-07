@@ -12,7 +12,12 @@ public class PrinterWithPrefixImpl implements Printer {
         this.renderer = renderer;
     }
 
-    public void setPrefix(Object data) {
+    public PrinterWithPrefixImpl(String prefix, Renderer renderer) {
+        this.prefix = prefix;
+        this.renderer = renderer;
+    }
+
+    public void setPrefix(String data) {
         prefix += data.toString();
     }
     public void print(String data) {
